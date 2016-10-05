@@ -47,11 +47,9 @@ use Pragmatist\UrlExpander\CachingUrlExpander;
 use Pragmatist\UrlExpander\RedirectBasedUrlExpander;
 use League\Uri\Schemes\Http;
 
-$cachePool = new ArrayCachePool(); // From the cache/array-adapter package
-
 $expander = new CachingUrlExpander(
     RedirectBasedUrlExpander::createWithGuzzleClient(),
-    $cachePool
+    new ArrayCachePool(); // From the cache/array-adapter package
 );
 
 $shortUri = Http::createFromString('http://bit.ly/2dtGsBS');
