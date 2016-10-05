@@ -58,13 +58,6 @@ echo $expander->expand($shortUri); // Outputs: https://github.com/pragmatist/url
 echo $expander->expand($shortUri); // From cache
 ```
 
-You can also use the command line client to expand short URLs:
-
-```bash
-$ ./bin/expand http://bit.ly/2dtGsBS
-https://github.com/pragmatist/url-expander
-```
-
 ## Testing
 
 `UrlExpander` has a [PHPUnit](https://phpunit.de/) test suite. To run the tests, run the following command from the project folder.
