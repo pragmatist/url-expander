@@ -1,9 +1,22 @@
+---
 language: php
-install:
-- composer install
+
 php:
-- 7.0
-- 7.1
+    - 7.0
+    - 7.1
+
+sudo: false
+
+env:
+    - COMPOSER_OPTS=""
+    - COMPOSER_OPTS="--prefer-lowest"
+
+install:
+    - travis_retry composer update $COMPOSER_OPTS
+
 script:
-- vendor/bin/phpunit
-- vendor/bin/phpcs --standard=PSR2 src tests
+    - vendor/bin/phpunit --coverage-text --coverage-clover coverage.xml
+
+after_script:
+    - wget https://scrutinizer-ci.com/ocular.phar
+    - php ocular.phar code-coverage:upload --format=php-clover coverage.xml
