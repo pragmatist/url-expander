@@ -7,10 +7,6 @@
 
 The `UrlExpander` package provides a simple library to expand short URLs.
 
-## Documentation
-
-Full documentation can be found at [pragmatist.github.io/url-expander](http://pragmatist.github.io/url-expander).
-
 ## System Requirements
 
 You need **PHP >= 7.0** to use this library.
@@ -19,13 +15,64 @@ You need **PHP >= 7.0** to use this library.
 
 Install `UrlExpander` using Composer.
 
-    $ composer require pragmatist/url-expander
+```bash
+$ composer require pragmatist/url-expander
+```
+
+## Usage
+
+Simple redirect-based URL expansion:
+
+```php
+<?php
+
+use Pragmatist\UrlExpander\RedirectBasedUrlExpander;
+use League\Uri\Schemes\Http;
+
+$expander = RedirectBasedUrlExpander::createWithGuzzleClient();
+$expandedUri = $expander->expand(
+    Http::createFromString('http://bit.ly/2dtGsBS')
+);
+
+echo $expandedUri; // Outputs: https://github.com/pragmatist/url-expander
+```
+
+Use the CachingUrlExpander to cache expanded URLs in a PSR-6 compatible cache:
+
+```php
+<?php
+
+use Cache\Adapter\PHPArray\ArrayCachePool;
+use Pragmatist\UrlExpander\CachingUrlExpander;
+use Pragmatist\UrlExpander\RedirectBasedUrlExpander;
+use League\Uri\Schemes\Http;
+
+$cachePool = new ArrayCachePool(); // From the cache/array-adapter package
+
+$expander = new CachingUrlExpander(
+    RedirectBasedUrlExpander::createWithGuzzleClient(),
+    $cachePool
+);
+
+$shortUri = Http::createFromString('http://bit.ly/2dtGsBS');
+echo $expander->expand($shortUri); // Outputs: https://github.com/pragmatist/url-expander
+echo $expander->expand($shortUri); // From cache
+```
+
+You can also use the command line client to expand short URLs:
+
+```bash
+$ ./bin/expand http://bit.ly/2dtGsBS
+https://github.com/pragmatist/url-expander
+```
 
 ## Testing
 
 `UrlExpander` has a [PHPUnit](https://phpunit.de/) test suite. To run the tests, run the following command from the project folder.
 
-    $ ./vendor/bin/phpunit
+```bash
+$ ./vendor/bin/phpunit
+```
 
 ## Security
 
