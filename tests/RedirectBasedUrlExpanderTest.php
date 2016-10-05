@@ -134,14 +134,6 @@ final class RedirectBasedUrlExpanderTest extends \PHPUnit_Framework_TestCase
         $this->expander->expand($givenUri);
     }
 
-    public function testThrowsExceptionWhenUriInvalid()
-    {
-        $givenUri = Http::createFromString('asdasdasd');
-
-        $this->expectException(InvalidUri::class);
-        $this->expander->expand($givenUri);
-    }
-
     public function testThrowsExceptionWhenFailedToConnect()
     {
         $givenUri = Http::createFromString('http://localhost');

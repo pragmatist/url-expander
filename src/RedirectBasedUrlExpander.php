@@ -58,13 +58,11 @@ final class RedirectBasedUrlExpander implements UrlExpander
     private function fetchUri(UriInterface $uri): ResponseInterface
     {
         try {
-            return $this->httpClient->request('HEAD', $uri);
+            return $this->httpClient->request('HEAD', (string) $uri);
         } catch (TooManyRedirectsException $e) {
             throw new TooManyRedirects($e->getMessage());
         } catch (ConnectException $e) {
             throw new FailedToConnect($e->getMessage());
-        } catch (\InvalidArgumentException $e) {
-            throw new InvalidUri($e->getMessage());
         }
     }
 
