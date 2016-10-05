@@ -2,6 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/pragmatist/url-expander/master.svg?style=flat-square)](https://travis-ci.org/pragmatist/url-expander)
 [![Quality Score](https://img.shields.io/scrutinizer/g/pragmatist/url-expander.svg?style=flat-square)](https://scrutinizer-ci.com/g/pragmatist/url-expander)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/pragmatist/url-expander.svg?style=flat-square)](https://scrutinizer-ci.com/g/pragmatist/url-expander/code-structure)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Latest Version](https://img.shields.io/github/release/pragmatist/url-expander.svg?style=flat-square)](https://github.com/pragmatist/url-expander/releases)
 [![Total Downloads](https://img.shields.io/packagist/dt/pragmatist/url-expander.svg?style=flat-square)](https://packagist.org/packages/pragmatist/url-expander)
