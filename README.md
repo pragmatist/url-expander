@@ -1,9 +1,10 @@
 # URL Expander
 
-[![Build Status](https://travis-ci.org/pragmatist/url-expander.svg)](https://travis-ci.org/pragmatist/url-expander)
-[![Build Status](https://scrutinizer-ci.com/g/pragmatist/url-expander/badges/build.png?b=master)](https://scrutinizer-ci.com/g/pragmatist/url-expander/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/pragmatist/url-expander/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pragmatist/url-expander/?branch=master)
-[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/pragmatist/url-expander/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/travis/pragmatist/url-expander/master.svg?style=flat-square)](https://travis-ci.org/pragmatist/url-expander)
+[![Quality Score](https://img.shields.io/scrutinizer/g/pragmatist/url-expander.svg?style=flat-square)](https://scrutinizer-ci.com/g/pragmatist/url-expander)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Latest Version](https://img.shields.io/github/release/pragmatist/url-expander.svg?style=flat-square)](https://github.com/pragmatist/url-expander/releases)
+[![Total Downloads](https://img.shields.io/packagist/dt/pragmatist/url-expander.svg?style=flat-square)](https://packagist.org/packages/pragmatist/url-expander)
 
 The `UrlExpander` package provides a simple library to expand short URLs.
 
