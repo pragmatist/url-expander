@@ -26,3 +26,11 @@ Install `UrlExpander` using Composer.
 `UrlExpander` has a [PHPUnit](https://phpunit.de/) test suite. To run the tests, run the following command from the project folder.
 
     $ ./vendor/bin/phpunit
+
+## Security
+
+If you discover any security related issues, please email hello@pragmatist.nl instead of using the issue tracker.
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
