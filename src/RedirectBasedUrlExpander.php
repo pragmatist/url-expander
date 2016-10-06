@@ -10,7 +10,6 @@ use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Exception\TooManyRedirectsException;
 use League\Uri\Schemes\Http;
 use Pragmatist\UrlExpander\RedirectBasedUrlExpander\FailedToConnect;
-use Pragmatist\UrlExpander\RedirectBasedUrlExpander\InvalidUri;
 use Pragmatist\UrlExpander\RedirectBasedUrlExpander\TooManyRedirects;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
